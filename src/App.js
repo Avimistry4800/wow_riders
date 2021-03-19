@@ -12,6 +12,9 @@ import Destination from './Components/Destination/Destination';
 import Login from './Components/Login/Login';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
+import { Nav, Navbar } from 'react-bootstrap';
+import Header from './Components/Header/Header';
+import NotFound from './Components/NotFound/NotFound';
 
 
 export const UserContext = createContext();
@@ -23,27 +26,7 @@ function App(props) {
     <UserContext.Provider value ={[loggedinUser, setLoggedinUser]}>
   <Router>
       <div>
-        <nav>
-          <ul>
-            <li>
-              <Link to="/home">Home</Link>
-            </li>
-            <li>
-              <Link to="/blog">Blog</Link>
-            </li>
-            <li>
-              <Link to="/contact">Contact</Link>
-            </li>
-            <li>
-              <Link to="/destination">Destination</Link>
-            </li>
-            <li>
-              <Link to="/login">Login</Link>
-            </li>
-          </ul>
-        </nav>
-
-        
+      <Header></Header> 
         <Switch>
           <Route path="/blog">
             <Blog />
@@ -59,6 +42,12 @@ function App(props) {
           </Route>
           <Route path="/home">
             <Home />
+          </Route>
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route  path="*">
+            <NotFound />
           </Route>
         </Switch>
       </div>

@@ -71,6 +71,7 @@ function Login() {
       createUserWithEmailAndPassword(user.name,user.email, user.password)
       .then(res=>{
         handleResponse(res,true)
+        console.log(user);
     })
     }
 
