@@ -19,8 +19,10 @@ const Header = () => {
                         <Nav.Link href="/destination">Destination</Nav.Link>
                         <Nav.Link href="/blog">Blog</Nav.Link>
                         <Nav.Link href="/contact">Contact</Nav.Link>
-                        <Nav.Link href="/login"> Login
-                            {/* {loggedinUser? loggedinUser.name:'Login'} */}
+                        <Nav.Link href="/login">
+                        {loggedinUser.name ?loggedinUser.name:"Login"}
+
+
       </Nav.Link>
                     </Nav>
                 </Navbar.Collapse>

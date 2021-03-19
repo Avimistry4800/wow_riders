@@ -5,6 +5,7 @@ import Rides from '../Rides/Rides'
 import rideData from '../Data/Data'
 import { useEffect } from 'react';
 import './Home.css'
+import FinalDestination from '../FinalDestination/FinalDestination';
 
 const Home = () => {
     const [ride, setRide] = useState([]);
@@ -21,7 +22,9 @@ const Home = () => {
                         ride={ride}></Rides>
                     )
                 }
+               
             </div>
+           
         </section>
     );
 };

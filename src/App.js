@@ -38,9 +38,9 @@ function App(props) {
           <PrivateRoute path="/destination">
             <Destination />
           </PrivateRoute >
-          {/* <PrivateRoute path="/destination/finalDestination">
+          <PrivateRoute path="/finalDestination">
             <FinalDestination />
-          </PrivateRoute > */}
+          </PrivateRoute >
           <Route path="/login">
             <Login />
           </Route>
