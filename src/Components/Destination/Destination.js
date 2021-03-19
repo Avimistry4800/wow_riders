@@ -1,10 +1,11 @@
 import React from 'react';
 import { Button, Form } from 'react-bootstrap';
+import map from '../../images/Map.png';
 
 const Destination = () => {
     return (
-        <div>
-            <div>
+        <div className="d-flex">
+            <div style={{width: '200px' ,marginLeft:"150px",marginTop:"150px"}}>
                 <Form>
                     <Form.Group controlId="formBasicStart">
                         <Form.Label>Pick Form</Form.Label>
@@ -19,7 +20,9 @@ const Destination = () => {
                     </Button>
                 </Form>
             </div>
-            <div></div>
+            <div>
+                <img style={{height: '600px', marginLeft:"200px" , marginTop:"50px"}}src={map} alt=""/>
+            </div>
         </div>
     );
 };   

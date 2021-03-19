@@ -15,6 +15,7 @@ import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
 import { Nav, Navbar } from 'react-bootstrap';
 import Header from './Components/Header/Header';
 import NotFound from './Components/NotFound/NotFound';
+import FinalDestination from './Components/FinalDestination/FinalDestination';
 
 
 export const UserContext = createContext();
@@ -37,6 +38,9 @@ function App(props) {
           <PrivateRoute path="/destination">
             <Destination />
           </PrivateRoute >
+          {/* <PrivateRoute path="/destination/finalDestination">
+            <FinalDestination />
+          </PrivateRoute > */}
           <Route path="/login">
             <Login />
           </Route>

@@ -88,12 +88,7 @@ function Login() {
 
   return (
     <div style={{textAlign: 'center'}}>
-      {
-        user.isSignIn ? <button onClick={signOut}>Sign out</button> :
-          <button onClick={googleSignIn}>Sign in</button>
-      }
-      <br/>
-      <button onClick={fbSignIn}>Sign in with Facebook</button>
+      
       {
         user.isSignIn && <div>
           <img src={user.photo} alt="" />
@@ -101,7 +96,6 @@ function Login() {
           <p>Email: {user.email}</p>
         </div>
       }
-      <h1>Our own Authentication </h1>
       <input type="checkbox" onChange={() => setNewUser(!newUser)} name="newUser" id="" />
       <label htmlFor="newUser">New user Sign-up</label>
       <form onSubmit={handleSubmit}>
@@ -114,6 +108,12 @@ function Login() {
         <br />
         <input type="submit" value="Submit" />
       </form>
+      {
+        user.isSignIn ? <button onClick={signOut}>Sign out</button> :
+          <button onClick={googleSignIn}>Sign in with Google</button>
+      }
+      <br/>
+      <button onClick={fbSignIn}>Sign in with Facebook</button>
       <p style={{ color: "red" }}>{user.error}</p>
       {user.success && <p style={{ color: "green" }}>User {newUser ? 'created' : 'Logged in'} successfully</p>}
     </div>

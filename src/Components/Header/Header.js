@@ -4,6 +4,7 @@ import { UserContext } from '../../App';
 import logo from '../../images/logo.png';
 const Header = () => {
     const [loggedinUser, setLoggedinUser] =useContext(UserContext);
+
     return (
         <>
 
@@ -18,8 +19,8 @@ const Header = () => {
                         <Nav.Link href="/destination">Destination</Nav.Link>
                         <Nav.Link href="/blog">Blog</Nav.Link>
                         <Nav.Link href="/contact">Contact</Nav.Link>
-                        <Nav.Link eventKey={2} href="#memes">
-                            Login
+                        <Nav.Link href="/login"> Login
+                            {/* {loggedinUser? loggedinUser.name:'Login'} */}
       </Nav.Link>
                     </Nav>
                 </Navbar.Collapse>

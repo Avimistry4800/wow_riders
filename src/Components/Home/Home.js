@@ -10,7 +10,7 @@ const Home = () => {
     const [ride, setRide] = useState([]);
     useEffect(() => {
         setRide(rideData);
-        console.log(rideData);
+        // console.log(rideData);
     }, [])
     return (
         <section className="banner row">
